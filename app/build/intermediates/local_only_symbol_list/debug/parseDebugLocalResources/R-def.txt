@@ -1,0 +1,7 @@
+R_DEF: Internal format may change without notice
+local
+id addButton
+id statusText
+id taskInput
+id taskList
+layout activity_main
