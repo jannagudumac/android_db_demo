@@ -1,4 +1,5 @@
 @startuml
+!pragma layout smetana
 title MiniTodo — main classes
 skinparam classAttributeIconSize 0
 class Task {

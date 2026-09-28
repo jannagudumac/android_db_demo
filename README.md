@@ -140,9 +140,15 @@ If PlantUML is available:
 plantuml -tsvg -o rendered docs/uml/*.puml
 ```
 
-No local PlantUML executable or JAR was found during verification, so the sources
-are provided without SVG or PNG exports. Rendered SVG files will appear in
-`docs/uml/rendered/`. No large rendering toolchain is required to build the app.
+SVG and PNG exports of all four diagrams are available in
+[docs/uml/rendered/](docs/uml/rendered/). They were generated using the PlantUML
+JAR bundled with the VS Code PlantUML extension. The class diagram uses the
+built-in Smetana layout engine, so Graphviz is not required.
+
+In VS Code, press **Ctrl+Shift+P**, select **PlantUML: Export Workspace Diagrams**,
+and choose **svg** or **png**. The extension's export directory is controlled by
+the `plantuml.exportOutDir` setting. SVG is useful for sharp text when zooming;
+PNG is useful for inserting into documents.
 
 ## Important note
 
