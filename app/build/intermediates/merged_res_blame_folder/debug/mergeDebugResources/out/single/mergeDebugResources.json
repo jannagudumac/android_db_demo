@@ -1,6 +1,34 @@
 [
     {
-        "merged": "com.example.persistencedemo.app-debug-19:/layout_activity_main.xml.flat",
-        "source": "com.example.persistencedemo.app-main-21:/layout/activity_main.xml"
+        "merged": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-debug-21:/layout_activity_main.xml.flat",
+        "source": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-main-23:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-debug-21:/layout_dialog_edit_task.xml.flat",
+        "source": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-main-23:/layout/dialog_edit_task.xml"
+    },
+    {
+        "merged": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-debug-21:/drawable_ic_edit.xml.flat",
+        "source": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-main-23:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.example.persistencedemo.app-debug-21:/layout_dialog_edit_task.xml.flat",
+        "source": "com.example.persistencedemo.app-main-23:/layout/dialog_edit_task.xml"
+    },
+    {
+        "merged": "com.example.persistencedemo.app-debug-21:/drawable_ic_launcher.xml.flat",
+        "source": "com.example.persistencedemo.app-main-23:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-debug-21:/drawable_ic_delete.xml.flat",
+        "source": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-main-23:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-debug-21:/layout_item_task.xml.flat",
+        "source": "/home/etudiant/.gradle/daemon/9.3.0/com.example.persistencedemo.app-main-23:/layout/item_task.xml"
+    },
+    {
+        "merged": "com.example.persistencedemo.app-debug-21:/layout_activity_main.xml.flat",
+        "source": "com.example.persistencedemo.app-main-23:/layout/activity_main.xml"
     }
 ]

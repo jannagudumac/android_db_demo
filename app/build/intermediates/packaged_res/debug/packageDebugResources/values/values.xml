@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="completed_count">
+        <item quantity="one">%d completed</item>
+        <item quantity="other">%d completed</item>
+    </plurals>
+    <plurals name="task_count">
+        <item quantity="one">%d task</item>
+        <item quantity="other">%d tasks</item>
+    </plurals>
+    <string name="add">ADD</string>
+    <string name="app_name">MiniTodo</string>
+    <string name="cancel">Cancel</string>
+    <string name="complete_task">Completed: %1$s</string>
+    <string name="counter_format">%1$s · %2$s</string>
+    <string name="delete">DELETE</string>
+    <string name="delete_confirmation">Delete this task?</string>
+    <string name="delete_task_description">Delete: %1$s</string>
+    <string name="edit_task">Edit task</string>
+    <string name="edit_task_description">Edit: %1$s</string>
+    <string name="empty_state">No tasks yet. Add your first task!</string>
+    <string name="empty_title">Enter a title.</string>
+    <string name="loading">Loading…</string>
+    <string name="new_task">New task</string>
+    <string name="save">SAVE</string>
+    <style name="Theme.MiniTodo" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#315C4C</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">#FAFAF7</item>
+    </style>
+</resources>

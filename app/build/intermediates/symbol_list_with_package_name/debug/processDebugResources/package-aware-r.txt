@@ -1,5 +1,10 @@
 com.example.persistencedemo
 attr alpha
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts
@@ -12,9 +17,14 @@ attr fontStyle
 attr fontVariationSettings
 attr fontWeight
 attr lStar
+attr layoutManager
 attr nestedScrollViewStyle
 attr queryPatterns
+attr recyclerViewStyle
+attr reverseLayout
 attr shortcutMatchRequired
+attr spanCount
+attr stackFromEnd
 attr ttcIndex
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
@@ -29,6 +39,12 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -50,6 +66,9 @@ drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_delete
+drawable ic_edit
+drawable ic_launcher
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -105,24 +124,32 @@ id addButton
 id async
 id blocking
 id chronometer
+id counter
+id deleteTask
 id dialog_button
+id editTask
+id editTitle
 id edit_text_id
+id emptyState
 id forever
 id hide_ime_id
 id icon
 id icon_group
 id info
+id is_pooling_container_tag
 id italic
+id item_touch_helper_previous_elevation
 id line1
 id line3
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id pooling_container_listener_holder_tag
 id report_drawn
 id right_icon
 id right_side
-id statusText
+id root
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -136,8 +163,10 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id taskCompleted
 id taskInput
 id taskList
+id taskTitle
 id text
 id text2
 id time
@@ -150,15 +179,21 @@ id view_tree_view_model_store_owner
 integer status_bar_notification_info_maxnum
 layout activity_main
 layout custom_dialog
+layout dialog_edit_task
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_task
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+plurals completed_count
+plurals task_count
+string add
 string androidx_startup
+string app_name
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -166,12 +201,26 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string cancel
+string complete_task
+string counter_format
+string delete
+string delete_confirmation
+string delete_task_description
+string edit_task
+string edit_task_description
+string empty_state
+string empty_title
+string loading
+string new_task
+string save
 string status_bar_notification_info_overflow
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
+style Theme_MiniTodo
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 styleable Capability queryPatterns shortcutMatchRequired
@@ -180,3 +229,4 @@ styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchSt
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd

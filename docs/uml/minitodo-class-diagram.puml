@@ -1,0 +1,78 @@
+@startuml
+title MiniTodo — main classes
+skinparam classAttributeIconSize 0
+class Task {
+  +id : long
+  +title : String
+  +completed : boolean
+  +Task(title : String)
+  +copy() : Task
+}
+interface TaskDao <<Dao>> {
+  +observeAll() : LiveData<List<Task>>
+  +insert(task : Task) : long
+  +update(task : Task) : int
+  +delete(task : Task) : int
+}
+abstract class AppDatabase <<RoomDatabase>> {
+  {static} -INSTANCE : AppDatabase
+  {abstract} +taskDao() : TaskDao
+  {static} +getInstance(context : Context) : AppDatabase
+}
+class TaskRepository {
+  {static} -executor : ExecutorService
+  -taskDao : TaskDao
+  -tasks : LiveData<List<Task>>
+  +TaskRepository(application : Application)
+  +getTasks() : LiveData<List<Task>>
+  +insert(task : Task) : void
+  +update(task : Task) : void
+  +delete(task : Task) : void
+}
+class TaskViewModel <<AndroidViewModel>> {
+  -repository : TaskRepository
+  +getTasks() : LiveData<List<Task>>
+  +addTask(title : String) : void
+  +updateTask(task : Task) : void
+  +deleteTask(task : Task) : void
+}
+class MainActivity <<ComponentActivity>> {
+  -viewModel : TaskViewModel
+  -taskInput : EditText
+  -counter : TextView
+  -emptyState : TextView
+  #onCreate(savedInstanceState : Bundle) : void
+  -updateCounter(tasks : List<Task>) : void
+  +onCompletedChanged(task : Task, completed : boolean) : void
+  +onEdit(task : Task) : void
+  +onDelete(task : Task) : void
+}
+class TaskAdapter <<ListAdapter>> {
+  -listener : Listener
+  {static} -DIFF : DiffUtil.ItemCallback<Task>
+  +TaskAdapter(listener : Listener)
+  +onCreateViewHolder(parent, viewType) : TaskHolder
+  +onBindViewHolder(holder, position) : void
+}
+interface "TaskAdapter.Listener" as Listener {
+  +onCompletedChanged(task : Task, completed : boolean) : void
+  +onEdit(task : Task) : void
+  +onDelete(task : Task) : void
+}
+MainActivity ..|> Listener
+MainActivity --> TaskViewModel
+MainActivity ..> TaskAdapter : creates / submitList
+TaskAdapter --> Listener : callbacks
+TaskViewModel --> TaskRepository
+TaskRepository --> TaskDao
+TaskRepository ..> AppDatabase : getInstance(application)
+TaskRepository --> ExecutorService : serialized writes
+AppDatabase ..> TaskDao : taskDao()
+AppDatabase ..> Task : entity, version 1
+TaskDao ..> Task
+TaskAdapter ..> Task : displays / compares
+note bottom of AppDatabase
+  Singleton using applicationContext
+  SQLite file : tasks.db
+end note
+@enduml

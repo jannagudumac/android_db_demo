@@ -1,0 +1,41 @@
+@startuml
+title Add a task
+actor User
+participant MainActivity
+participant TaskAdapter
+participant TaskViewModel
+participant TaskRepository
+participant ExecutorService
+participant TaskDao
+participant Room
+database SQLite
+participant "LiveData<List<Task>>" as LiveData
+note over MainActivity, LiveData
+  In onCreate : getTasks().observe(this, observer).
+  Repository retains the LiveData from TaskDao.observeAll().
+  ViewModel exposes the same LiveData.
+end note
+User -> MainActivity : enter "Prepare the lab", click ADD
+MainActivity -> MainActivity : trim / reject a blank title
+MainActivity -> TaskViewModel : addTask(title)
+TaskViewModel -> TaskViewModel : trim / validation / new Task(title)
+TaskViewModel -> TaskRepository : insert(task)
+TaskRepository -> ExecutorService : execute(lambda)
+ExecutorService -> TaskDao : insert(task) [worker thread]
+TaskDao -> Room : generated insert (@Insert)
+Room -> SQLite : INSERT (transaction)
+SQLite --> Room : id
+Room --> TaskDao : id
+TaskDao --> ExecutorService : long (unused)
+Room -> Room : invalidates the observed table
+Room -> SQLite : SELECT * FROM tasks ORDER BY id DESC
+SQLite --> Room : updated rows
+Room -> LiveData : publishes List<Task>
+LiveData -> MainActivity : observer (UI thread, active Activity)
+MainActivity -> TaskAdapter : submitList(tasks)
+MainActivity -> MainActivity : updateCounter(tasks) / empty state
+note over Room, MainActivity
+  Room reruns the query in the background.
+  SQLite never calls the Activity directly.
+end note
+@enduml

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.persistencedemo.app-mergeDebugResources-17:/values-iw/values-iw.xml",
+            "outputFile": "com.example.persistencedemo.app-mergeDebugResources-19:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "/home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/res/values-iw/values-iw.xml",

@@ -1,16 +1,19 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:1:1-14:12
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:1:1-14:12
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:1:1-14:12
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:1:1-14:12
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:1:1-15:12
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:1:1-15:12
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:1:1-15:12
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:1:1-15:12
 MERGED from [androidx.activity:activity:1.10.1] /home/etudiant/.gradle/caches/9.3.0/transforms/d1cf9071a00f0758b1f9bd51ae5fad6c/transformed/activity-1.10.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/2e30be13a824d89ca09b0bff7330c87a/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3dc73cd365555c7da27c905aeaec0c8d/transformed/recyclerview-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/fd09a3d85ef03bfe5a30f9c1888c38b7/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/10b029bc5bcb01abbac7c5942e9902a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.savedstate:savedstate-android:1.3.0] /home/etudiant/.gradle/caches/9.3.0/transforms/95dfc9fa6dcbe7addea7cb5fbfc98a44/transformed/savedstate-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/0989d85addee4113f92f0d410b4a2801/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/c41cbe6b1519b5a047e1c28fd9616d69/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3bfe19e51713fefe371156a2e09a4076/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/873609afd995fb5cee2396593d4c128a/transformed/lifecycle-livedata-core-2.9.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/24b43f7640777563c5883867acbf1e64/transformed/lifecycle-livedata-2.9.0/AndroidManifest.xml:17:1-22:12
@@ -26,16 +29,16 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /home/etudiant/.gradle/ca
 MERGED from [androidx.core:core-viewtree:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/f3b5decb70ef30e501744c9d2aedde49/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.5.0] /home/etudiant/.gradle/caches/9.3.0/transforms/05f0280f85865e0780be50c0b770c765/transformed/annotation-experimental-1.5.0/AndroidManifest.xml:2:1-7:12
 	package
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:1:11-69
 application
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:2:5-13:19
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:2:5-13:19
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:2:5-14:19
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:2:5-14:19
 MERGED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
 MERGED from [androidx.room:room-runtime-android:2.8.5] /home/etudiant/.gradle/caches/9.3.0/transforms/c77dc7a7b3ed1f3b565826f5483aa745/transformed/room-runtime/AndroidManifest.xml:23:5-29:19
@@ -47,43 +50,49 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/etudiant/.gradle/cach
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/etudiant/.gradle/caches/9.3.0/transforms/fd35f891aa76e8ac53d7ea25e26cda6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/etudiant/.gradle/caches/9.3.0/transforms/fd35f891aa76e8ac53d7ea25e26cda6c/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:5:9-35
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:6:9-35
 	android:label
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:4:9-40
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:5:9-41
+	android:icon
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:4:9-45
 	android:allowBackup
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:3:9-35
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:3:9-35
 	android:theme
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:6:9-72
-activity#com.example.persistencedemo.MainActivity
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:7:9-12:20
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:7:9-46
+activity#com.example.persistencedemo.ui.MainActivity
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:8:9-13:20
 	android:exported
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:7:48-71
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:8:51-74
 	android:name
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:7:19-47
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:8:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:8:13-11:29
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:9:13-12:29
 action#android.intent.action.MAIN
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:9:17-69
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:10:17-69
 	android:name
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:9:25-66
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:10:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:10:17-77
+ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:11:17-77
 	android:name
-		ADDED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml:10:27-74
+		ADDED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml:11:27-74
 uses-sdk
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
-INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
+INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 MERGED from [androidx.activity:activity:1.10.1] /home/etudiant/.gradle/caches/9.3.0/transforms/d1cf9071a00f0758b1f9bd51ae5fad6c/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.10.1] /home/etudiant/.gradle/caches/9.3.0/transforms/d1cf9071a00f0758b1f9bd51ae5fad6c/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/2e30be13a824d89ca09b0bff7330c87a/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/2e30be13a824d89ca09b0bff7330c87a/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3dc73cd365555c7da27c905aeaec0c8d/transformed/recyclerview-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3dc73cd365555c7da27c905aeaec0c8d/transformed/recyclerview-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/fd09a3d85ef03bfe5a30f9c1888c38b7/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/fd09a3d85ef03bfe5a30f9c1888c38b7/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/10b029bc5bcb01abbac7c5942e9902a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/etudiant/.gradle/caches/9.3.0/transforms/10b029bc5bcb01abbac7c5942e9902a6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.savedstate:savedstate-android:1.3.0] /home/etudiant/.gradle/caches/9.3.0/transforms/95dfc9fa6dcbe7addea7cb5fbfc98a44/transformed/savedstate-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-android:1.3.0] /home/etudiant/.gradle/caches/9.3.0/transforms/95dfc9fa6dcbe7addea7cb5fbfc98a44/transformed/savedstate-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/0989d85addee4113f92f0d410b4a2801/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
@@ -92,6 +101,8 @@ MERGED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/tran
 MERGED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/c41cbe6b1519b5a047e1c28fd9616d69/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/c41cbe6b1519b5a047e1c28fd9616d69/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/7b1b2ed7a2613a540b8f77fdc1462b80/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3bfe19e51713fefe371156a2e09a4076/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/3bfe19e51713fefe371156a2e09a4076/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.0] /home/etudiant/.gradle/caches/9.3.0/transforms/873609afd995fb5cee2396593d4c128a/transformed/lifecycle-livedata-core-2.9.0/AndroidManifest.xml:20:5-44
@@ -121,9 +132,9 @@ MERGED from [androidx.core:core-viewtree:1.0.0] /home/etudiant/.gradle/caches/9.
 MERGED from [androidx.annotation:annotation-experimental:1.5.0] /home/etudiant/.gradle/caches/9.3.0/transforms/05f0280f85865e0780be50c0b770c765/transformed/annotation-experimental-1.5.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.5.0] /home/etudiant/.gradle/caches/9.3.0/transforms/05f0280f85865e0780be50c0b770c765/transformed/annotation-experimental-1.5.0/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/etudiant/Téléchargements/PersistenceDemoAndroid/app/src/main/AndroidManifest.xml
+		INJECTED from /home/etudiant/uni/Android/AndroidStudioProjects/android_db_demo/app/src/main/AndroidManifest.xml
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] /home/etudiant/.gradle/caches/9.3.0/transforms/78447686781f52bb88bb9aa2eef1763e/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel

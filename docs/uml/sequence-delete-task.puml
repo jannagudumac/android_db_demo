@@ -1,0 +1,46 @@
+@startuml
+title Delete a task
+actor User
+participant MainActivity
+participant TaskAdapter
+participant TaskViewModel
+participant TaskRepository
+participant ExecutorService
+participant TaskDao
+participant Room
+database SQLite
+participant "LiveData<List<Task>>" as LiveData
+note over MainActivity, LiveData
+  In onCreate : getTasks().observe(this, observer).
+  Repository retains the LiveData from TaskDao.observeAll().
+  ViewModel exposes the same LiveData.
+end note
+User -> TaskAdapter : click Delete
+TaskAdapter -> MainActivity : onDelete(task)
+MainActivity -> User : "Delete this task?"
+alt CANCEL
+  User -> MainActivity : cancel (no write)
+else DELETE
+  User -> MainActivity : confirm
+  MainActivity -> TaskViewModel : deleteTask(task)
+  TaskViewModel -> TaskRepository : delete(task)
+  TaskRepository -> ExecutorService : execute(lambda)
+  ExecutorService -> TaskDao : delete(task) [worker thread]
+  TaskDao -> Room : generated delete (@Delete)
+  Room -> SQLite : DELETE by primary key (transaction)
+  SQLite --> Room : row count
+  Room --> TaskDao : row count
+  TaskDao --> ExecutorService : int (unused)
+Room -> Room : invalidates the observed table
+Room -> SQLite : SELECT * FROM tasks ORDER BY id DESC
+SQLite --> Room : updated rows
+Room -> LiveData : publishes List<Task>
+LiveData -> MainActivity : observer (UI thread, active Activity)
+MainActivity -> TaskAdapter : submitList(tasks)
+MainActivity -> MainActivity : updateCounter(tasks) / empty state
+note over Room, MainActivity
+  Room reruns the query in the background.
+  SQLite never calls the Activity directly.
+end note
+end
+@enduml

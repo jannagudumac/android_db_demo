@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.9.2" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.persistencedemo.ui.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="drawable[ic_launcher(U),ic_delete(U),ic_edit(U)],id[root(U),taskInput(U),addButton(U),counter(U),emptyState(U),taskList(U),editTitle(U),taskCompleted(U),taskTitle(U),editTask(U),deleteTask(U)],layout[activity_main(U),dialog_edit_task(U),item_task(U)],plurals[completed_count(U),task_count(U)],string[app_name(U),new_task(U),add(U),loading(U),empty_state(U),edit_task(U),delete(U),cancel(U),save(U),delete_confirmation(U),empty_title(U),complete_task(U),edit_task_description(U),delete_task_description(U),counter_format(U)],style[Theme_MiniTodo(U)];e^13^14^15^16^17,f^14,10^18^2^19^1;;;"/>
+    </map>
+
+</incidents>
