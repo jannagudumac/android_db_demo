@@ -2,10 +2,14 @@ package com.example.persistencedemo.ui;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.net.Uri;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.activity.ComponentActivity;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -16,12 +20,18 @@ import com.example.persistencedemo.R;
 import com.example.persistencedemo.data.Task;
 import com.example.persistencedemo.viewmodel.TaskViewModel;
 import java.util.List;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class MainActivity extends ComponentActivity implements TaskAdapter.Listener {
     private TaskViewModel viewModel;
     private EditText taskInput;
     private TextView counter;
     private TextView emptyState;
+    private final ActivityResultLauncher<String> exportLauncher = registerForActivityResult(
+            new ActivityResultContracts.CreateDocument("application/json"), this::exportTasks);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +60,10 @@ public class MainActivity extends ComponentActivity implements TaskAdapter.Liste
             adapter.submitList(tasks);
             updateCounter(tasks);
             emptyState.setVisibility(tasks.isEmpty() ? View.VISIBLE : View.GONE);
+            findViewById(R.id.exportButton).setEnabled(true);
         });
+
+        findViewById(R.id.exportButton).setOnClickListener(v -> exportLauncher.launch("tasks.json"));
 
         findViewById(R.id.addButton).setOnClickListener(v -> {
             String title = taskInput.getText().toString().trim();
@@ -61,6 +74,37 @@ public class MainActivity extends ComponentActivity implements TaskAdapter.Liste
             viewModel.addTask(title);
             taskInput.setText("");
         });
+    }
+
+    private void exportTasks(Uri uri) {
+        if (uri == null) return; // The user canceled the document picker.
+        // Capture the latest observed list on the UI thread; file I/O runs separately.
+        List<Task> tasks = viewModel.getTasks().getValue();
+        if (tasks == null) {
+            Toast.makeText(this, R.string.export_error, Toast.LENGTH_LONG).show();
+            return;
+        }
+        new Thread(() -> {
+            try {
+                JSONArray json = new JSONArray();
+                for (Task task : tasks) {
+                    JSONObject row = new JSONObject();
+                    row.put("id", task.id);
+                    row.put("title", task.title);
+                    row.put("completed", task.completed);
+                    json.put(row);
+                }
+                try (OutputStream output = getContentResolver().openOutputStream(uri, "wt")) {
+                    if (output == null) throw new java.io.IOException("No output stream");
+                    output.write(json.toString(2).getBytes(StandardCharsets.UTF_8));
+                }
+                runOnUiThread(() -> Toast.makeText(this, R.string.export_success,
+                        Toast.LENGTH_LONG).show());
+            } catch (Exception error) {
+                runOnUiThread(() -> Toast.makeText(this, R.string.export_error,
+                        Toast.LENGTH_LONG).show());
+            }
+        }, "task-json-export").start();
     }
 
     private void updateCounter(List<Task> tasks) {

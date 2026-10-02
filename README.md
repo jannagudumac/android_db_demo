@@ -2,8 +2,9 @@
 
 ## Objective
 
-A small university demonstration of CRUD, Room, reactive updates with LiveData,
-and SQLite persistence. The interface and project documentation are in English.
+A small university demonstration of UI state restoration, JSON file export,
+CRUD, Room, reactive updates with LiveData, and SQLite persistence.
+The interface and project documentation are in English.
 Application code uses Java and XML layouts.
 
 ## Stack
@@ -102,6 +103,33 @@ the Android plugin requires Java 17 or later.
 
 ## Demo procedure
 
+### UI state and JSON file persistence
+
+1. Type "Finish the presentation" in the main **New task** field without pressing ADD.
+2. Rotate the device to landscape, then back to portrait: the unfinished text remains.
+   Android saves/restores the EditText view state using its stable `taskInput` ID;
+   no custom saved-state code is needed. The draft is not a row in Room and is
+   not guaranteed to survive force-stop or a fresh launch.
+3. Press ADD and wait for the task to appear. Add another task and check one task.
+4. Press **EXPORT JSON**. In Android's document picker, choose **Downloads**, keep
+   `tasks.json` (or choose another name), and press **SAVE**.
+5. Wait for "Tasks exported to the selected file." Open the chosen file using
+   the device's Files app and a text viewer, or pull it onto your computer:
+   `adb pull /sdcard/Download/tasks.json` (for the emulator's Downloads destination).
+6. Show the JSON array: each task includes numeric `id`, string `title`, and
+   boolean `completed`. Exporting an empty list produces `[]`.
+
+The system picker uses `CreateDocument("application/json")`; the user selects
+the location and filename. Export writes UTF-8, indented JSON through the
+ContentResolver on a background thread, using the latest observed task list
+when the picker returns. Unsaved input is excluded. The button becomes enabled
+once Room supplies the first list. Canceling the picker does not export;
+write failures show an error message. No storage permission is required.
+The file is a snapshot: later database changes do not update it.
+The existing Room layers, database write executor, and UML structure are unchanged.
+
+### CRUD and SQLite persistence
+
 1. Launch MiniTodo.
 2. Add "Prepare the lab".
 3. Add "Read the course notes"; observe the counter and task order.
@@ -159,6 +187,12 @@ MiniTodo for the first time. This deletes the old data.
 There is no migration or automatic destructive reset.
 
 ## Validation
+
+For the JSON-export addition, `assembleDebug` and `lintDebug` passed with zero
+lint errors (two existing SDK/dependency warnings). API 29 emulator verification
+confirmed main-input restoration across landscape/portrait rotation, document
+creation in Downloads, and exported JSON containing all three task fields.
+Force-stop/relaunch retained the saved tasks and completion state.
 
 - `assembleDebug` and `lintDebug` passed with zero lint errors. Four warnings
   concern only the target SDK and newer dependency versions.
