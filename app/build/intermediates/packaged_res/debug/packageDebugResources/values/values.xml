@@ -20,6 +20,9 @@
     <string name="edit_task_description">Edit: %1$s</string>
     <string name="empty_state">No tasks yet. Add your first task!</string>
     <string name="empty_title">Enter a title.</string>
+    <string name="export_error">Could not export tasks. Check the destination and try again.</string>
+    <string name="export_success">Tasks exported to the selected file.</string>
+    <string name="export_tasks">EXPORT JSON</string>
     <string name="loading">Loading…</string>
     <string name="new_task">New task</string>
     <string name="save">SAVE</string>

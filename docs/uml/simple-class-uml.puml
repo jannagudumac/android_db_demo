@@ -1,0 +1,41 @@
+@startuml
+!pragma layout smetana
+title MiniTodo — responsibilities and dependencies
+
+top to bottom direction
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam defaultFontSize 20
+skinparam ArrowFontSize 16
+hide empty members
+
+package "UI" {
+  class MainActivity
+  class TaskAdapter
+}
+
+package "Application logic" {
+  class TaskViewModel
+  class TaskRepository
+}
+
+package "Persistence" {
+  class AppDatabase
+  interface TaskDao
+  class Task <<Entity>> {
+    id
+    title
+    completed
+  }
+}
+
+MainActivity --> TaskAdapter : displays tasks
+TaskAdapter ..> MainActivity : user actions
+MainActivity --> TaskViewModel : requests / observes
+TaskViewModel --> TaskRepository : delegates
+TaskRepository --> TaskDao : reads / writes
+TaskRepository ..> AppDatabase : obtains DAO
+AppDatabase ..> TaskDao : provides
+TaskDao ..> Task : reads / writes
+
+@enduml

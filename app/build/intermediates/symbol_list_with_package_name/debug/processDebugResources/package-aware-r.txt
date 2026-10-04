@@ -131,6 +131,7 @@ id editTask
 id editTitle
 id edit_text_id
 id emptyState
+id exportButton
 id forever
 id hide_ime_id
 id icon
@@ -211,6 +212,9 @@ string edit_task
 string edit_task_description
 string empty_state
 string empty_title
+string export_error
+string export_success
+string export_tasks
 string loading
 string new_task
 string save

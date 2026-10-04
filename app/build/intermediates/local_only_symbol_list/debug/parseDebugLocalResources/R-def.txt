@@ -9,6 +9,7 @@ id deleteTask
 id editTask
 id editTitle
 id emptyState
+id exportButton
 id root
 id taskCompleted
 id taskInput
@@ -31,6 +32,9 @@ string edit_task
 string edit_task_description
 string empty_state
 string empty_title
+string export_error
+string export_success
+string export_tasks
 string loading
 string new_task
 string save

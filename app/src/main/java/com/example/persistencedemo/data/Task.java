@@ -17,7 +17,8 @@ public class Task {
         this.completed = false;
     }
 
-    // Keep the old ListAdapter snapshot intact so DiffUtil can compare it.
+    // copy() creates a new Task object before an update, 
+    // so DiffUtil can correctly compare the old and new versions.
     public Task copy() {
         Task copy = new Task(title);
         copy.id = id;
